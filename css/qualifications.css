@@ -1,0 +1,127 @@
+.qualifications{
+	width:100%;
+	padding:.5rem 1rem;
+	background:#f0f1f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.qualifications__title{
+	margin-bottom:.5rem;
+}
+.qualifications__title__text{
+	position: relative;
+	font-size: .35rem;
+	font-weight: bold;
+	display: block;
+	color:#fff;
+	text-transform: uppercase;
+	letter-spacing: .03rem;
+}
+.qualifications__title__text span{
+	position: absolute;
+	top:0;
+	left:0;
+	color:#000;
+	overflow: hidden;
+	animation: animateText 1.5s linear 1;
+	/*line-height: .01rem;*/
+}
+@keyframes animateText{
+	 0%{
+        	width:0;
+        }
+    100%{
+            width:100%;
+        }
+}
+.qualifications__img{
+	
+	width:15rem;
+	padding:.5rem 0;
+	display: flex;
+	justify-content: space-around;
+	overflow: hidden;
+}
+.qualifications__img__content{
+	opacity: 0;
+	position: relative;
+	display: flex;
+	position: relative;
+	background:#dde1e7;
+	width:5rem;
+	height:2.5rem;
+	overflow: hidden;
+	border-radius: .1rem;
+	box-shadow: -.3rem -.3rem .7rem #ffffff73,
+				 .2rem  .2rem .5rem rgb(94 104 121 / 50%)
+}
+.qualifications__img__content.acvtive:nth-child(1){
+	left:0;
+	opacity: 1;
+	animation: qualificationsImgOne  1.5s linear 1;
+}
+.qualifications__img__content.acvtive:nth-child(2){
+	right:0;
+	opacity: 1;
+	animation: qualificationsImgTwo  1.2s linear 1;
+}
+@keyframes qualificationsImgOne{
+	 0%{
+        	left:-7rem;
+        	opacity: 0;
+        }
+     50%{
+     		opacity: 0.5;
+     	}   
+    100%{
+            left:0;
+            opacity: 1;
+        }
+}
+@keyframes qualificationsImgTwo{
+	 0%{
+        	right:-7rem;
+        	opacity: 0;
+        }
+     50%{
+     		opacity: 0.5;
+     	}   
+    100%{
+            right:0;
+            opacity: 1;
+        }
+}
+
+.qualifications__img__content img{
+	width:50%;
+	height:100%;
+	text-align: center;
+}
+.qualifications__img__text{
+	width: 50%;
+	
+}
+.qualifications__img__title{
+	width:100%;
+	height: 2rem;
+    border-left: 2px solid;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+.qualifications__img__title span{
+	display: block;
+	width:100%;
+	padding: 0 .1rem;
+}
+.qualifications__img__title span:nth-child(1){
+	height:1rem;
+	line-height:1.5rem;
+	font-size:.2rem;
+}
+.qualifications__img__title span:nth-child(2){
+	font-size:.16rem;
+	height:.8rem;
+	font-size:.3rem;
+}

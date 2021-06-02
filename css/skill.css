@@ -1,0 +1,148 @@
+.skill{
+	width:100%;
+	padding: .5rem 1rem;
+	background:#b1b7bf8f;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skill__title{
+	margin-bottom:.5rem;
+}
+.skill__title__text{
+	position: relative;
+	font-size: .35rem;
+	font-weight: bold;
+	display: block;
+	color:#fff;
+	text-transform: uppercase;
+	letter-spacing: .03rem;
+}
+.skill__title__text span{
+	position: absolute;
+	top:0;
+	left:0;
+	color:#000;
+	overflow: hidden;
+	animation: animateText 2s linear 1;
+}
+@keyframes animateText{
+	 0%{
+        	width:0;
+        }
+    100%{
+            width:100%;
+        }
+}
+.skill__sheet{
+	width:15rem;
+}
+.skill__sheet__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+}
+.skill__sheet__icon{
+	position: relative;
+	font-size:1rem;
+	width:2.06rem;
+	
+}
+.skill__sheet__icon span{
+	position: absolute;
+	top:0;
+	left:0;
+	width:2.06rem;
+
+}
+.skill__sheet__icon span{
+	overflow: hidden;
+	animation: animateIcon 5.5s linear 1;
+}
+@keyframes animateIcon{
+	 0%{
+        	height: 0;
+        }
+    100%{
+            height: 100%;
+        }
+}
+.skill__sheet__text{
+	min-width:2rem;
+	text-align: center;
+	position: absolute;
+	bottom:0;
+	font-size:.5rem;
+}
+.skill__sheet__card{
+	position: relative;
+	min-width:2.5rem;
+	height:3.2rem;
+	box-shadow: inset .05rem .05rem .05rem rgba(0,0,0,0.2),
+				inset .05rem .05rem .15rem rgba(2555,255,255,0.1),
+				.05rem .05rem .05rem rgba(0,0,0,0.3),
+				-.05rem -.05rem .15rem rgba(255,255,255,0.1);
+	border-radius:.15rem;
+	margin:.3rem;
+	float:left;
+}
+.skill__sheet__card:before{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height:100%;
+	background:rgba(255,255,255,0.1);
+}
+.skill__sheet__box{
+	position: absolute;
+	top:.2rem;
+	left:.2rem;
+	right:.2rem;
+	bottom:.2rem;
+	background:#b1b7bf8f;
+	border:2px solid #1e1f23;
+	border-radius:.15rem;
+	box-shadow:0 .2rem .5rem ;
+	transition: .5s;
+	overflow: hidden;
+}
+.skill__sheet__box:hover{
+	transform: translateY(-10%);
+	background:#f0f1f3;
+}
+
+.skill__sheet__box:before{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height:100%;
+	background:rgba(255,255,255,0.05);
+	pointer-events:none;
+}
+.skill__sheet__content{
+	/*padding:.2rem;*/
+	text-align: center;
+}
+.skill__sheet__text{
+	transition:0.5s;
+	/*text-transform:uppercase;*/
+	font-size:.3rem;
+	transform:translateY(.5rem);
+}
+.skill__sheet__box:hover .skill__sheet__text{
+	transform: translateY(-.3rem);
+	/*transition-delay:.6s;*/
+}
+
+.skill__sheet__icon{
+	padding:0;
+	line-height: 2.6rem;
+}

@@ -1,0 +1,60 @@
+nav{
+	position: fixed;
+	/*display: none;*/
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 999;
+	opacity: 0;
+}
+.fix-nav{
+	display: block;
+	background:#b1b7bf8f;
+	box-shadow: 2px 2px 30px rgb(255 255 255 / 3%);
+	animation: animeNav 1s 1;
+	opacity: 1;
+}
+
+@keyframes animeNav{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:.5;
+	}
+	100%{
+		opacity:1;
+	}
+}
+
+.navigation{
+	display: flex;
+	position: relative;
+	justify-content:space-between; 
+	padding:0 1rem;
+}
+.logo{
+	display: block;
+	width:1.5rem;
+	height:.6rem;
+	font-size:.5rem;
+	color:#000;
+}
+.logo span{
+	color:#eeeeb3;
+}
+ul{
+	position: absolute;
+	right:3rem;
+	display: flex;
+}
+ul > li{
+	width:1.5rem;
+	text-align: center;
+	line-height:.6rem;
+	font-size: .18rem;
+	margin-right:.1rem;
+	color:#000;
+	cursor: pointer;
+	font-weight: bold;
+}

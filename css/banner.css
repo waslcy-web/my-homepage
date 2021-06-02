@@ -1,0 +1,176 @@
+.banner{
+	position: relative;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	min-height:100vh;
+ 	background:#f0f1f3;
+ 	overflow: hidden;
+}
+
+/*text*/
+ .banner__text{
+ 	/*display: none;*/
+ }
+ .banner__text div{
+ 	display: inline-block;
+ }
+.banner .text1,
+.banner .text2{
+ 	position: relative;
+ 	font-size:.8rem;
+ 	text-align:center;
+ 	color:#000;
+ 	-webkit-box-reflect: below -0.5em linear-gradient(transparent, #0004);
+ }
+ .banner .text1{
+ 	width:4rem;
+ }
+ .banner .text2{
+ 	width:8rem;
+ }
+
+ .banner .text1 span,
+ .banner .text2 span{
+ 	position: relative;
+ 	display: inline-block;
+ }
+
+.technology{
+	width:100%;
+	height:5rem;
+}
+
+/*anime*/
+.banner__anime{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: animeRoad 3s ease-out 1;
+	transform: rotate(0deg);
+	display: none;
+	/*opacity: 0;*/
+}
+@keyframes animeRoad{
+	0%{
+		transform: rotate(180deg);
+	}
+	50%{
+		transform: rotate(-30deg);
+	}
+	60%{
+		transform: rotate(50deg);
+	}
+	70%{
+		transform: rotate(-15deg);
+	}
+	80%{
+		transform: rotate(15deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+.infininte{
+	position:relative;
+	width:12rem;
+	height:1.6rem;
+	background:#52525224;
+	transform-origin:bottom;
+	transform-style:preserve-3d;
+	transform:perspective(500px) rotateX(50deg);
+}
+.infininte::before{
+	content:'';
+	position: absolute;
+	top:50%;
+	left:0;
+	transform: translateY(-50%);
+	width:100%;
+	height:10px;
+	background:#fff;
+	background:linear-gradient(90deg,#fff 0,#fff 70%,#525252 70%,#525252 100%);
+	background-size:120px;
+	animation: animateRoad .3s linear infinite;
+}
+@keyframes animateRoad{
+	0%{
+		background-position:0;
+	}
+	100%{
+		background-position: -120px;
+	}
+}
+.infininte::after
+{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:30px;
+	background:#333;
+	bottom: -30px;
+	transform-origin:top;
+	transform:perspective(500px) rotateX(-25deg);
+}
+.shadow
+{
+	position:absolute;
+	bottom:-93px;
+	left:50%;
+	width:95%;
+	transform:translateX(-50%);
+	height:60px;
+	background:#f00;
+	background: linear-gradient(rgba(0,0,0,0.25),transparent);
+}
+.car{
+	position:absolute;
+	width:100%;
+	height:6rem;
+	overflow: hidden;
+}
+.car img{
+	position: absolute;
+	top:50%;
+	left:1rem;
+	transform: translate(0,-50%);
+	animation: animateCar 3s linear 1;
+}
+@keyframes animateCar
+{
+	0%{
+		transform:translate(0,-50%);
+	}
+	20%{
+		transform:translate(5rem,-50%);
+	}
+	40%{
+		transform:translate(4rem,-50%);
+	}
+	50%{
+		transform:translate(1rem,-50%);
+	}
+	55%{
+		transform:translate(2rem,-100%);
+	}
+	60%{
+		transform:translate(3rem,-150%);
+	}
+	65%{
+		transform:translate(4rem,-200%);
+	}
+	70%{
+		transform:translate(5rem,-150%);
+	}
+	75%{
+		transform:translate(6rem,-100%);
+	}
+	80%{
+		transform:translate(7rem,-50%);
+	}
+	100%{
+		transform:translate(0,-50%);
+	}
+}
