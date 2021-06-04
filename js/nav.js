@@ -28,14 +28,9 @@ function setup(){
 	//banner-function 
 	bannerTextAnime(text1,text2);
 	bannerCarAnime();
+	bannerBackground();
+	setInterval(bannerBackground,100);
 
-	//skill-function
-	// skillIconStyle(skillIcon);
-
-	//qualifications
-	// qualificationsTextAnime(qualifications);
-
-	
 }
 
 //nav
@@ -142,7 +137,18 @@ const bannerCarAnime=()=>{
 		}
 	})
 }
+//skillTitleAnime
+const skillTitleAnime=(scrollHeight,skill,text,skillTitle)=>{
 
+	const skillHeight = Math.round(skill.getBoundingClientRect().height / 2);
+	const skillTitleSpan = document.querySelector('.skill__title__text span')
+
+	if(scrollHeight > skillHeight ){
+		skillTitleSpan ? '':skillTitle.appendChild(text);
+		skillIconStyle();
+	}
+
+}
 //skillTitleAnime
 const skillTitleAnime=(scrollHeight,skill,text,skillTitle)=>{
 
