@@ -1,15 +1,14 @@
 //nav,
 function setup(){
-	//all
-	
 
 	//nav
 	const nav = document.querySelector('nav');
 
 	//banner
+	const banner = document.querySelector('.banner');
 	const text1 = document.querySelector('.text1');
 	const text2 = document.querySelector('.text2');
-
+	
 	//skill
 	const skill = document.querySelector('.skill');
 	const skillTitle = document. querySelector('.skill__title__text');
@@ -30,6 +29,9 @@ function setup(){
 	bannerCarAnime();
 	bannerBackground();
 	setInterval(bannerBackground,100);
+
+	console.log('123');
+
 
 }
 
@@ -137,18 +139,31 @@ const bannerCarAnime=()=>{
 		}
 	})
 }
-//skillTitleAnime
-const skillTitleAnime=(scrollHeight,skill,text,skillTitle)=>{
 
-	const skillHeight = Math.round(skill.getBoundingClientRect().height / 2);
-	const skillTitleSpan = document.querySelector('.skill__title__text span')
+//bannerBackground
+const bannerBackground=()=>{
 
-	if(scrollHeight > skillHeight ){
-		skillTitleSpan ? '':skillTitle.appendChild(text);
-		skillIconStyle();
-	}
+	const bg = document.querySelector('.banner__background')
+	const bgSpan = document.createElement('span')
+	const colors=["#2196f3","#e91e63","#ffeb3b","#74ff1d"]
+
+	let size = Math.random()*50;
+
+	bgSpan.style.width = 20 + size + "px";
+	bgSpan.style.height = 20 + size + "px";
+	bgSpan.style.top = Math.random() * bg.offsetHeight + "px";
+	bgSpan.style.left = Math.random() * bg.offsetWidth + "px";
+
+	const bgColor = colors[Math.floor(Math.random()*colors.length)];
+	bgSpan.style.background = bgColor;
+
+	bg.appendChild(bgSpan);
+	setTimeout(function(){
+		bgSpan.remove();
+	},5000)
 
 }
+
 //skillTitleAnime
 const skillTitleAnime=(scrollHeight,skill,text,skillTitle)=>{
 
